@@ -27,6 +27,7 @@ import game5 from '../assets/game5.png';
 import game6 from '../assets/game6.png';
 import game7 from '../assets/game7.png';
 import quote from '../assets/quote.png';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -37,6 +38,7 @@ import quote from '../assets/quote.png';
 
 const LandingPage = () => {
 
+    const navigate=useNavigate()
     useEffect(() => {
         AOS.init({ duration: 2000 })
     }, [])
@@ -47,7 +49,7 @@ const LandingPage = () => {
                 <Grid container sx={{ justifyContent: "center", alignItems: "center", bgcolor: "#f1f3f6", overflow: "hidden"}}>
                     <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <Grid container sx={{ justifyContent: 'space-between', alignItems: 'center', padding: '10px 5px ', boxShadow: '1px 1px 5px 0px rgba(0,0,0,0.75)' }}>
-                            <Grid item xs={2} sx={{ display: 'flex' }}>
+                            <Grid item xs={2} sx={{ display: 'flex' }} onClick={()=>{navigate('/')}}>
                                 <Typography sx={{ color: '#0d47a1', fontSize: '19px', fontWeight: '800' }}>L</Typography>
                                 <Typography sx={{ color: '#2e7d32', fontSize: '19px', fontWeight: '800' }}>u</Typography>
                                 <Typography sx={{ color: '#cddc39', fontSize: '19px', fontWeight: '800' }}>c</Typography>
@@ -60,17 +62,17 @@ const LandingPage = () => {
                             </Grid>
                             <Grid item xs={9}>
                                 <Box sx={{ width: '100%', display: { lg: 'flex', md: 'flex', sm: 'none', xs: 'none' } }}>
-                                    <Box sx={{ width: '20%', color: '#5c6bc0', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                                        <Typography sx={{ fontSize: '17px' }}>Home</Typography>
+                                    <Box sx={{ width: '20%', color: '#5c6bc0', display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
+                                        <Typography sx={{ fontSize: '17px',cursor:"pointer" }}>Home</Typography>
                                     </Box>
                                     <Box sx={{ width: '20%', color: '#5c6bc0', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                                        <Typography sx={{ fontSize: '17px' }}>About</Typography>
+                                        <Typography sx={{ fontSize: '17px',cursor:"pointer" }} onClick={()=>{navigate('/about')}}>About</Typography>
                                     </Box>
                                     <Box sx={{ width: '20%', color: '#5c6bc0', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                                        <Typography sx={{ fontSize: '17px' }}>Gallery</Typography>
+                                        <Typography sx={{ fontSize: '17px',cursor:"pointer" }}>Gallery</Typography>
                                     </Box>
                                     <Box sx={{ width: '20%', color: '#5c6bc0', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                                        <Typography sx={{ fontSize: '17px' }}>Contact</Typography>
+                                        <Typography sx={{ fontSize: '17px' ,cursor:"pointer"}}>Contact</Typography>
                                     </Box>
                                     <Box sx={{ width: '20%', color: '#5c6bc0', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
                                         <Button variant='contained' sx={{ bgcolor: '#5c6bc0', color: 'white', fontSize: '13px', borderRadius: '10px' }}>Download</Button>
@@ -277,7 +279,7 @@ const LandingPage = () => {
                                     <Grid item xs={12} sm={12} md={6} lg={6} data-aos="fade-up" sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                                         <Box>
                                             <Typography align='center' sx={{ color: "#263238", fontSize: "30px", fontWeight: "800" }}>Step 1: Download and Signup </Typography>
-                                            <Typography sx={{ color: "#546e7a", display: "flex", alignItems: "center", justifyContent: "center" }}><CheckIcon sx={{ mr: "5px", fontSize: "18px" }} /> Go to Play Store and Download the Color_Game App</Typography>
+                                            <Typography sx={{ color: "#546e7a", display: "flex", alignItems: "center", justifyContent: "center" }}><CheckIcon sx={{ mr: "5px", fontSize: "18px" }} /> Go to Play Store and Download the LuckyQuiz App</Typography>
                                             <Typography sx={{ color: "#546e7a", display: "flex", alignItems: "center", justifyContent: "center" }}><CheckIcon sx={{ mr: "5px", fontSize: "18px" }} /> Fill the details for make an account</Typography>
                                         </Box>
                                     </Grid>
@@ -400,7 +402,7 @@ const LandingPage = () => {
                                                                 <Box sx={{ borderRadius: "50px", height: "45px", width: "45px", overflow: "hidden" }}>
                                                                     <img src={av1} alt="bjp" height={"100%"} width={"100%"} />
                                                                 </Box>
-                                                                <Typography sx={{ fontSize: "15px", fontWeight: "700", ml: "10px", width: "fit-content", wordWrap: "wrap" }}>Anand pandey</Typography>
+                                                                <Typography sx={{ fontSize: "15px", fontWeight: "700", ml: "10px", width: "fit-content", wordWrap: "wrap" }}>Sumit singh</Typography>
                                                             </Box>
                                                             <Box sx={{ p: "10px" }}>
                                                                 <Rating name="size-large" defaultValue={5} sx={{ fontSize: "40px" }} size='large' disabled />
@@ -596,7 +598,7 @@ const LandingPage = () => {
                                     </Grid>
 
                                     <Grid item xs={12} lg={6}>
-                                        <Grid container sx={{ bgcolor: "white", p: "20px" }}>
+                                        <Grid container sx={{ bgcolor: "white", p: "20px"}}>
 
                                             <Grid item lg={6} md={6} sm={12} xs={12} sx={{ border: "3px solid white", bgcolor: "#f1f3f6", p: "40px 15px 30px 15px" }} data-aos="fade-up" >
                                                 <Box sx={{ display: "flex", justifyContent: "center" }}>
@@ -606,7 +608,7 @@ const LandingPage = () => {
                                                     ADDRESS
                                                 </Typography>
                                                 <Typography align='center'>
-                                                    P-27, 3rd Floor, Block P, Shivalik Colony, Malviya Nagar, New Delhi, Delhi 110017
+                                                   NEW STREET ,BEHIND LADURE, NEWYORK, US
                                                 </Typography>
                                             </Grid>
 
@@ -674,12 +676,12 @@ const LandingPage = () => {
 
                             </Grid>
 
-                            <Grid item xs={12} sx={{ bgcolor: "white", mt: "70px", p: "15px 30px" }}>
+                            <Grid item xs={12} sx={{ bgcolor: "white", mt: "70px", p: "15px 30px",mb:"20px"  }}>
                                 <Grid container sx={{ p: "30px 10px 40px 10px" }}>
                                     <Grid item lg={4} md={4} sm={6} xs={12} sx={{ display: "flex", justifyContent: { lg: "center", md: "center", sm: "left", xs: "left" } }}>
                                         <Box sx={{ mt: "20px" }}>
                                             <Typography sx={{ fontSize: "25px", color: "#212121" }}>
-                                                Color_Game
+                                                LuckyQuiz
                                             </Typography>
                                             <Typography sx={{ color: "#757575" }}>
                                                 Near MMUT College, Kunraghat Gorakhpur, U.P. -273452
@@ -698,19 +700,19 @@ const LandingPage = () => {
                                             <Typography sx={{ fontSize: "25px", color: "#212121" }}>
                                                 Useful Links
                                             </Typography>
-                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px" }}>
+                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px",cursor:"pointer" }} onClick={()=>{navigate('/')}}>
                                                 <KeyboardArrowRightIcon sx={{ mr: "5px" }} />Home
                                             </Typography>
-                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px" }}>
+                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px",cursor:"pointer" }} onClick={()=>{navigate('/about')}}>
                                                 <KeyboardArrowRightIcon sx={{ mr: "5px" }} />About us
                                             </Typography>
-                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px" }}>
+                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px",cursor:"pointer" }}>
                                                 <KeyboardArrowRightIcon sx={{ mr: "5px" }} />Team
                                             </Typography>
-                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px" }}>
+                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px",cursor:"pointer" }}>
                                                 <KeyboardArrowRightIcon sx={{ mr: "5px" }} />Terms of Use
                                             </Typography>
-                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px" }}>
+                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px",cursor:"pointer" }} onClick={()=>{navigate('/privacy')}}>
                                                 <KeyboardArrowRightIcon sx={{ mr: "5px" }} />Privacy Policy
                                             </Typography>
                                         </Box>
@@ -725,9 +727,9 @@ const LandingPage = () => {
                                             </Typography>
                                             <Box sx={{ display: "flex", justifyContent: "Center" }}>
                                                 <Box>
-                                                    <TwitterIcon sx={{ fontSize: "40px", color: "#757575", "&:hover": { color: "#2979ff" }, m: "10px" }} />
-                                                    <FacebookIcon sx={{ fontSize: "40px", color: "#757575", "&:hover": { color: "#1e88e5" }, m: "10px" }} />
-                                                    <InstagramIcon sx={{ fontSize: "40px", color: "#757575", "&:hover": { color: "#ff1744" }, m: "10px" }} />
+                                                    <TwitterIcon sx={{ cursor:"pointer",fontSize: "40px", color: "#757575", "&:hover": { color: "#2979ff" }, m: "10px" }} />
+                                                    <FacebookIcon sx={{ cursor:"pointer",fontSize: "40px", color: "#757575", "&:hover": { color: "#1e88e5" }, m: "10px" }} />
+                                                    <InstagramIcon sx={{ cursor:"pointer",fontSize: "40px", color: "#757575", "&:hover": { color: "#ff1744" }, m: "10px" }} />
                                                 </Box>
                                             </Box>
                                         </Box>
@@ -739,7 +741,7 @@ const LandingPage = () => {
 
 
 
-                            <Grid item xs={12} sx={{ mt: "30px" }}>
+                            {/* <Grid item xs={12} sx={{ mt: "30px" }}>
 
                                 <Box sx={{ mt: "15px", p: "10px 10px 30px 10px" }}>
                                     <Typography align='center' sx={{ color: "#757575" }}>© Copyright Adelsocial Pvt Ltd. All Rights Reserved</Typography>
@@ -748,7 +750,7 @@ const LandingPage = () => {
                                     </Typography>
                                 </Box>
 
-                            </Grid>
+                            </Grid> */}
                         </Grid>
                     </Grid>
                 </Grid>

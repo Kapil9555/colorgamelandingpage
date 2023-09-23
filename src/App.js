@@ -1,5 +1,7 @@
-import { BrowserRouter as Router,Route,Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import AboutUs from "./pages/AboutUs";
 import LandingPage from "./pages/LandingPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   return (
@@ -7,6 +9,12 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<LandingPage/>}/>
+          <Route exact path="/about" element={<AboutUs/>}/>
+          <Route exact path="/privacy" element={<PrivacyPolicy/>}/>
+
+
+          {/* <Route exact path="/" element={<ShowButton/>}/> */}
+
         </Routes>
       </Router>
   </>
