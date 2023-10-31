@@ -1,5 +1,5 @@
 import CheckIcon from '@mui/icons-material/Check';
-import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Container, Grid, OutlinedInput, Paper, Rating, TextareaAutosize, Typography } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, AppBar, Box, Button, Container, Grid, OutlinedInput, Paper, Rating, TextareaAutosize, Toolbar, Typography } from '@mui/material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
@@ -16,7 +16,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import av1 from '../assets/av1.avif';
+import black from '../assets/hero.avif';
 import av2 from '../assets/av2.avif';
 import av3 from '../assets/av3.avif';
 import game1 from '../assets/game1.png';
@@ -42,37 +42,49 @@ const PrivacyPolicy = () => {
     useEffect(() => {
         AOS.init({ duration: 2000 })
     }, [])
+
+    const handleNavigator =(ele)=>{
+        navigate(ele)
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        })
+    }
     // 
     return (
         <>
             <Container maxWidth={'xl'} disableGutters >
-                <Grid container sx={{ justifyContent: "center", alignItems: "center", bgcolor: "#f1f3f6", overflow: "hidden" }}>
-                    <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <Grid container sx={{ justifyContent: 'space-between', alignItems: 'center', padding: '10px 5px ', boxShadow: '1px 1px 5px 0px rgba(0,0,0,0.75)' }}>
-                            <Grid item xs={2} sx={{ display: 'flex' }}>
-                                <Typography sx={{ color: '#0d47a1', fontSize: '19px', fontWeight: '800' }}>L</Typography>
-                                <Typography sx={{ color: '#2e7d32', fontSize: '19px', fontWeight: '800' }}>u</Typography>
-                                <Typography sx={{ color: '#cddc39', fontSize: '19px', fontWeight: '800' }}>c</Typography>
-                                <Typography sx={{ color: '#673ab7', fontSize: '19px', fontWeight: '800' }}>k</Typography>
-                                <Typography sx={{ color: '#ef6c00', fontSize: '19px', fontWeight: '800' }}>y</Typography>
-                                <Typography sx={{ color: '#e91e63', fontSize: '19px', fontWeight: '800' }}>Q</Typography>
-                                <Typography sx={{ color: '#0d47a1', fontSize: '19px', fontWeight: '800' }}>u</Typography>
-                                <Typography sx={{ color: '#d50000', fontSize: '19px', fontWeight: '800' }}>i</Typography>
-                                <Typography sx={{ color: '#673ab7', fontSize: '19px', fontWeight: '800' }}>z</Typography>
+            
+            <AppBar sx={{bgcolor:'black',borderBottom:"2px solid white"}}>
+                    <Toolbar>
+                    
+                        <Grid container sx={{ justifyContent: 'space-between', alignItems: 'center', padding: '10px 5px ', }}>
+                            <Grid item xs={3} sx={{ display: 'flex',cursor:"pointer" }} onClick={()=>{navigate('/')}}>
+                                <Typography sx={{ color: 'lightgreen', fontSize: '22px', fontWeight: '800' }}>L</Typography>
+                                <Typography sx={{ color: 'yellow', fontSize: '22px', fontWeight: '800' }}>u</Typography>
+                                <Typography sx={{ color: 'skyblue', fontSize: '22px', fontWeight: '800' }}>c</Typography>
+                                <Typography sx={{ color: 'white', fontSize: '22px', fontWeight: '800' }}>k</Typography>
+                                <Typography sx={{ color: '#ef6c00', fontSize: '22px', fontWeight: '800' }}>y</Typography>
+                                <Typography sx={{ color: 'lightpink', fontSize: '22px', fontWeight: '800' }}>Q</Typography>
+                                <Typography sx={{ color: 'orange', fontSize: '22px', fontWeight: '800' }}>u</Typography>
+                                <Typography sx={{ color: 'lightgrey', fontSize: '22px', fontWeight: '800' }}>i</Typography>
+                                <Typography sx={{ color: 'white', fontSize: '22px', fontWeight: '800' }}>z</Typography>
                             </Grid>
-                            <Grid item xs={9}>
+                            <Grid item xs={7}>
                                 <Box sx={{ width: '100%', display: { lg: 'flex', md: 'flex', sm: 'none', xs: 'none' } }}>
-                                    <Box sx={{ width: '20%', color: '#5c6bc0', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                                        <Typography sx={{ fontSize: '17px', cursor: "pointer" }}  onClick={()=>{navigate('/')}}>Home</Typography>
+                                    <Box sx={{ width: '20%', color: '#5c6bc0', display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
+                                        <Typography sx={{ fontSize: '17px',cursor:"pointer", color:'white' }} onClick={()=>{navigate('/');window.scrollTo({top:0,
+                                        behavior:"smooth"})}}>Home</Typography>
                                     </Box>
                                     <Box sx={{ width: '20%', color: '#5c6bc0', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                                        <Typography sx={{ fontSize: '17px', cursor: "pointer" }}>About</Typography>
+                                        <Typography sx={{ fontSize: '17px',cursor:"pointer",color:'white' }} onClick={()=>{navigate('/about');window.scrollTo({top:0,
+                                        behavior:"smooth"})}}>About</Typography>
                                     </Box>
                                     <Box sx={{ width: '20%', color: '#5c6bc0', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                                        <Typography sx={{ fontSize: '17px', cursor: "pointer" }}>Gallery</Typography>
+                                        <Typography sx={{ fontSize: '17px',cursor:"pointer",color:'white' }}>Gallery</Typography>
                                     </Box>
                                     <Box sx={{ width: '20%', color: '#5c6bc0', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                                        <Typography sx={{ fontSize: '17px', cursor: "pointer" }}>Contact</Typography>
+                                        <Typography sx={{ fontSize: '17px' ,cursor:"pointer",color:'white'}}>Contact</Typography>
                                     </Box>
                                     <Box sx={{ width: '20%', color: '#5c6bc0', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
                                         <Button variant='contained' sx={{ bgcolor: '#5c6bc0', color: 'white', fontSize: '13px', borderRadius: '10px' }}>Download</Button>
@@ -81,25 +93,26 @@ const PrivacyPolicy = () => {
                                 </Box>
 
                             </Grid>
-                            <Grid item xs={1} sx={{ display: 'flex', justifyContent: 'right', alignItems: 'center', }}>
-
-                                <MenuIcon sx={{ color: 'grey' }} />
-                            </Grid>
+         
 
                         </Grid>
 
 
-                    </Grid>
+                   
+
+                    </Toolbar>
+                </AppBar>
                     {/* one  */}
-                    <Grid container sx={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', flexWrap: 'wrap-reverse', background: 'linear-gradient(166deg, rgba(250,250,250,1) 51%, rgba(153,162,218,1) 53%)', p: '20px 8px' }}>
-                        <Grid item lg={6} md={6} sm={12} xs={12} data-aos='fade-up' sx={{ mt: '40px' }} >
-                            <Typography sx={{ color: '#5c6bc0', fontSize: { lg: '32px', md: '28px', sm: '25px', xs: '23px' }, fontWeight: '800', textAlign: 'center' }}>Luckyquiz is one of the best skill based  game in india.</Typography>
-                            <Typography sx={{ fontSize: '15px', mt: '5px', textAlign: 'center' }}>Luckyquiz allows you to earn money by applying ur skill The amount earned can be withdraw easily.</Typography>
+                <Grid container sx={{ justifyContent: "center", alignItems: "center", bgcolor: "#f1f3f6", overflow: "hidden",pt:{lg:"60px",md:"60px",sm:"60px",xs:"55px"} }}>
+                    <Grid container sx={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', flexWrap: 'wrap-reverse', backgroundImage:`url(${black})`,backgroundRepeat:'no-repeat',backgroundSize:'100% 100%', p: '20px 8px'}}>
+                        <Grid item lg={6} md={6} sm={12} xs={12} data-aos='fade-up' sx={{mt:'-30px'}}  >
+                            <Typography sx={{ color: '#f5f5f5', fontSize: { lg: '30px', md: '28px', sm: '25px', xs: '23px' }, fontWeight: '800', textAlign: 'center' }}>Luckyquiz is one of the best skill based  game in india.</Typography>
+                            <Typography sx={{ fontSize: '15px', mt: '5px', textAlign: 'center', color:'#aed581' }}>Luckyquiz allows you to earn money by applying ur skill The amount earned can be withdraw easily.</Typography>
                         </Grid>
 
                         <Grid item data-aos='fade-up' lg={6} md={6} sm={12} xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                            <Box sx={{ width: { lg: '50%', md: '70%', sm: '50%', xs: '80%' }, height: '470px', }}>
-                                <img src={game3} width={'100%'} height={'100%'} alt='game1' style={{ borderRadius: '10px' }} />
+                            <Box sx={{ width: { lg: '50%', md: '70%', sm: '50%', xs: '80%' }, height: {lg:'470px',md:"470px",sm:"430px",xs:"400px"}, }}>
+                                <img src={game5} width={'100%'} height={'100%'} alt='game1' style={{ borderRadius: '10px' }} />
                             </Box>
 
                         </Grid>
@@ -149,10 +162,10 @@ All names, logos, marks, labels, trademarks, copyrights or intellectual and prop
 
 
 
-                            <Grid item xs={12}>
+                            <Grid item xs={12} sx={{bgcolor:'black'}}>
 
                                 <Grid container>
-                                    <Grid item xs={12} data-aos="fade-up" sx={{ bgcolor: "white", }}>
+                                    <Grid item xs={12} data-aos="fade-up" sx={{ bgcolor: "white", p: "40px 15px 30px 15px", mb: "25px" }}>
                                         <Typography align='center' sx={{ fontSize: "35px", color: "#7c4dff" }}>
                                             Contact
                                         </Typography>
@@ -161,56 +174,56 @@ All names, logos, marks, labels, trademarks, copyrights or intellectual and prop
                                         </Typography>
                                     </Grid>
 
-                                    <Grid item xs={12} lg={6}>
-                                        <Grid container sx={{ bgcolor: "white", p: "20px" }}>
+                                    <Grid item xs={12} lg={6} sx={{bgcolor:'black'}}>
+                                        <Grid container sx={{ bgcolor: "black", p: "20px"}}>
 
-                                            <Grid item lg={6} md={6} sm={12} xs={12} sx={{ border: "3px solid white", bgcolor: "#f1f3f6", p: "40px 15px 30px 15px" }} data-aos="fade-up" >
+                                            <Grid item lg={6} md={6} sm={12} xs={12} sx={{ border: "3px solid white", bgcolor: "black", p: "40px 15px 30px 15px" ,borderRadius:'7px' }} data-aos="fade-up" >
                                                 <Box sx={{ display: "flex", justifyContent: "center" }}>
-                                                    <LocationOnIcon sx={{ fontSize: "50px", color: "#78909c" }} />
+                                                    <LocationOnIcon sx={{ fontSize: "50px", color: "#1976d2" }} />
                                                 </Box>
-                                                <Typography align='center' sx={{ fontSize: "25px", color: "#7c4dff" }}>
+                                                <Typography align='center' sx={{ fontSize: "25px", color: "#1976d2" }}>
                                                     ADDRESS
                                                 </Typography>
-                                                <Typography align='center'>
-                                                    NEW STREET ,BEHIND LADURE, NEWYORK, US
+                                                <Typography align='center' sx={{color:'white'}}>
+                                                   BLOCK 231C, KACHARUPURIA, BUGDOI BRIDGE, JORHAT, 785001, ASSAM
                                                 </Typography>
                                             </Grid>
 
-                                            <Grid item lg={6} md={6} sm={12} xs={12} sx={{ border: "3px solid white", bgcolor: "#f1f3f6", p: "40px 15px 30px 15px" }} data-aos="fade-up" >
+                                            <Grid item lg={6} md={6} sm={12} xs={12} sx={{ border: "3px solid white", bgcolor: "black", p: "40px 15px 30px 15px" ,borderRadius:'7px'}} data-aos="fade-up" >
                                                 <Box sx={{ display: "flex", justifyContent: "center" }}>
-                                                    <CallIcon sx={{ fontSize: "50px", color: "#78909c" }} />
+                                                    <CallIcon sx={{ fontSize: "50px", color: "#1976d2" }} />
                                                 </Box>
-                                                <Typography align='center' sx={{ fontSize: "25px", color: "#7c4dff" }}>
+                                                <Typography align='center' sx={{ fontSize: "25px", color: "#1976d2" }}>
                                                     Call Us
                                                 </Typography>
-                                                <Typography align='center'>
-                                                    +91 800000000000
+                                                <Typography align='center' sx={{color:'white'}}>
+                                                    +91 8099851924
                                                 </Typography>
                                             </Grid>
 
-                                            <Grid item lg={6} md={6} sm={12} xs={12} sx={{ border: "3px solid white", bgcolor: "#f1f3f6", p: "40px 15px 30px 15px" }} data-aos="fade-up" >
+                                            <Grid item lg={6} md={6} sm={12} xs={12} sx={{ border: "3px solid white", bgcolor: "black", p: "40px 15px 30px 15px" , borderRadius:'7px'}} data-aos="fade-up" >
                                                 <Box sx={{ display: "flex", justifyContent: "center" }}>
-                                                    <MailIcon sx={{ fontSize: "50px", color: "#78909c" }} />
+                                                    <MailIcon sx={{ fontSize: "50px", color: "#1976d2" }} />
                                                 </Box>
-                                                <Typography align='center' sx={{ fontSize: "25px", color: "#7c4dff" }}>
+                                                <Typography align='center' sx={{ fontSize: "25px", color: "#1976d2" }}>
                                                     Email Us
                                                 </Typography>
-                                                <Typography align='center'>
-                                                    xyz@gmail.com
+                                                <Typography align='center' sx={{color:'white'}}>
+                                                    daichsenyo@gmail.com
                                                 </Typography>
                                             </Grid>
 
-                                            <Grid item lg={6} md={6} sm={12} xs={12} sx={{ border: "3px solid white", bgcolor: "#f1f3f6", p: "40px 15px 30px 15px" }} data-aos="fade-up" >
+                                            <Grid item lg={6} md={6} sm={12} xs={12} sx={{ border: "3px solid white", bgcolor: "black", p: "40px 15px 30px 15px", borderRadius:'7px' }} data-aos="fade-up" >
                                                 <Box sx={{ display: "flex", justifyContent: "center" }}>
-                                                    <AccessTimeIcon sx={{ fontSize: "50px", color: "#78909c" }} />
+                                                    <AccessTimeIcon sx={{ fontSize: "50px", color: "#1976d2" }} />
                                                 </Box>
-                                                <Typography align='center' sx={{ fontSize: "25px", color: "#7c4dff" }}>
+                                                <Typography align='center' sx={{ fontSize: "25px", color: "#1976d2" }}>
                                                     Working Hours
                                                 </Typography>
-                                                <Typography align='center'>
+                                                <Typography align='center' sx={{color:'white'}}>
                                                     Mon-Fri:9AM to 5PM
                                                 </Typography>
-                                                <Typography align='center'>
+                                                <Typography align='center' sx={{color:'white'}}>
                                                     Sun:9AM to 1PM
                                                 </Typography>
                                             </Grid>
@@ -220,15 +233,16 @@ All names, logos, marks, labels, trademarks, copyrights or intellectual and prop
 
                                         </Grid>
                                     </Grid>
-                                    <Grid item lg={6} xs={12} sx={{ bgcolor: "white", p: "25px 10px 30px 10px" }}>
-                                        <Box sx={{}} data-aos="fade-up">
 
-                                            <OutlinedInput placeholder='Your Name' sx={{ height: "50px" }} fullWidth />
-                                            <OutlinedInput placeholder='Your Email' sx={{ height: "50px", mt: "10px" }} fullWidth />
-                                            <OutlinedInput placeholder='Subject' sx={{ height: "50px", mt: "10px" }} fullWidth />
-                                            <TextareaAutosize className='placeHolder' placeholder='Mesage' style={{ width: "98.9%", marginTop: "10px" }} minRows={8} />
+                                    <Grid item lg={6} xs={12} sx={{ bgcolor: "black", p: "25px 10px 30px 10px" }}>
+
+                                        <Box component={'div'} data-aos="fade-up">
+                                            <OutlinedInput placeholder='Your Name' sx={{ height: "50px" , border:'1px solid #1976d2', color:'white', outline:'none'}} fullWidth />
+                                            <OutlinedInput placeholder='Your Email' sx={{ height: "50px", mt: "10px",  border:'1px solid #1976d2', color:'white'}} fullWidth />
+                                            <OutlinedInput placeholder='Subject' sx={{ height: "50px", mt: "10px", border:'1px solid #1976d2', color:'white' }} fullWidth />
+                                            <textarea  placeholder='Message' style={{ width: "98.9%", marginTop: "10px", border:'1px solid #1976d2', color:'white', backgroundColor:'transparent',height:"100px" }}  />
                                             <Box variant="outlined" sx={{ display: "flex", justifyContent: "center", mt: "20px" }} >
-                                                <Button variant='outlined' sx={{ borderRadius: "25px", p: "10px 20px", border: "2px solid #7c4dff", color: "#7c4dff" }}>Send Message</Button>
+                                                <Button variant='outlined' sx={{color:'"#1976d2" ', borderRadius: "25px", p: "10px 20px", border: "2px solid #1976d2", color: "white" }}>Send Message</Button>
                                             </Box>
                                         </Box>
 
@@ -240,68 +254,7 @@ All names, logos, marks, labels, trademarks, copyrights or intellectual and prop
 
                             </Grid>
 
-                            <Grid item xs={12} sx={{ bgcolor: "white", mt: "70px", p: "15px 30px",mb:"20px"  }}>
-                                <Grid container sx={{ p: "30px 10px 40px 10px" }}>
-                                    <Grid item lg={4} md={4} sm={6} xs={12} sx={{ display: "flex", justifyContent: { lg: "center", md: "center", sm: "left", xs: "left" } }}>
-                                        <Box sx={{ mt: "20px" }}>
-                                            <Typography sx={{ fontSize: "25px", color: "#212121" }}>
-                                                LuckyQuiz
-                                            </Typography>
-                                            <Typography sx={{ color: "#757575" }}>
-                                                Near MMUT College, Kunraghat Gorakhpur, U.P. -273452
-                                            </Typography>
-
-                                            <Typography sx={{ color: "#757575", mt: "15px" }}>
-                                                <span style={{ color: "#424242" }}>Phone:</span>+91 8387378738
-                                            </Typography>
-                                            <Typography sx={{ color: "#757575" }}>
-                                                <span style={{ color: "#424242" }}>Email:</span>+91 8387378738
-                                            </Typography>
-                                        </Box>
-                                    </Grid>
-                                    <Grid item lg={3} md={3} sm={6} xs={12} sx={{ display: "flex", justifyContent: { lg: "center", md: "center", sm: "left", xs: "left" } }}>
-                                        <Box sx={{ mt: "20px" }}>
-                                            <Typography sx={{ fontSize: "25px", color: "#212121" }}>
-                                                Useful Links
-                                            </Typography>
-                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px",cursor:"pointer" }}  onClick={()=>{navigate('/')}}>
-                                                <KeyboardArrowRightIcon sx={{ mr: "5px" }}/>Home
-                                            </Typography>
-                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px",cursor:"pointer" }} onClick={()=>{navigate('/about')}}>
-                                                <KeyboardArrowRightIcon sx={{ mr: "5px" }} />About us
-                                            </Typography>
-                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px",cursor:"pointer" }}>
-                                                <KeyboardArrowRightIcon sx={{ mr: "5px" }} />Team
-                                            </Typography>
-                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px",cursor:"pointer" }}>
-                                                <KeyboardArrowRightIcon sx={{ mr: "5px" }} />Terms of Use
-                                            </Typography>
-                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px",cursor:"pointer" }} onClick={()=>{navigate('/privacy')}}>
-                                                <KeyboardArrowRightIcon sx={{ mr: "5px" }} />Privacy Policy
-                                            </Typography>
-                                        </Box>
-                                    </Grid>
-                                    <Grid item lg={5} md={5} sm={6} xs={12} sx={{ display: "flex", justifyContent: { lg: "center", md: "center", sm: "left", xs: "left" } }}>
-                                        <Box sx={{ mt: "20px" }}>
-                                            <Typography align='center' sx={{ fontSize: "25px", color: "#212121" }}>
-                                                Our Social Networks
-                                            </Typography>
-                                            <Typography align='center' sx={{ mt: "15px" }}>
-                                                Connect with us via our Social Network Accounts
-                                            </Typography>
-                                            <Box sx={{ display: "flex", justifyContent: "Center" }}>
-                                                <Box>
-                                                    <TwitterIcon sx={{ cursor:"pointer",fontSize: "40px", color: "#757575", "&:hover": { color: "#2979ff" }, m: "10px" }} />
-                                                    <FacebookIcon sx={{ cursor:"pointer",fontSize: "40px", color: "#757575", "&:hover": { color: "#1e88e5" }, m: "10px" }} />
-                                                    <InstagramIcon sx={{ cursor:"pointer",fontSize: "40px", color: "#757575", "&:hover": { color: "#ff1744" }, m: "10px" }} />
-                                                </Box>
-                                            </Box>
-                                        </Box>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-
-
+                            
 
 
                             {/* <Grid item xs={12} sx={{ mt: "30px" }}>
@@ -317,6 +270,67 @@ All names, logos, marks, labels, trademarks, copyrights or intellectual and prop
                         </Grid>
                     </Grid>
                 </Grid>
+                <Box sx={{ mt: "70px", p: "15px 30px",bgcolor:"black"  }}>
+                                <Grid container sx={{ p: "5px 10px 20px 10px" }}>
+                                    <Grid item lg={4} md={4} sm={6} xs={12} sx={{ display: "flex", justifyContent: { lg: "center", md: "center", sm: "left", xs: "left" } }}>
+                                        <Box sx={{ mt: "20px" }}>
+                                            <Typography sx={{ fontSize: "25px",color:"white" }}>
+                                                LuckyQuiz
+                                            </Typography>
+                                            <Typography sx={{ color:"white" }}>
+                                            BLOCK 231C, KACHARUPURIA, BUGDOI BRIDGE,JORHAT,785001,ASSAM
+                                            </Typography>
+
+                                            <Typography sx={{  mt: "15px",color:"white" }}>
+                                                <span>Phone:</span>+91 -8099851924
+                                            </Typography>
+                                            <Typography sx={{ color: "#757575",color:"white" }}>
+                                                <span >Email:</span>DAICHSENYO@GMAIL.COM
+                                            </Typography>
+                                        </Box>
+                                    </Grid>
+                                    <Grid item lg={3} md={3} sm={6} xs={12} sx={{ display: "flex", justifyContent: { lg: "center", md: "center", sm: "left", xs: "left" } }}>
+                                        <Box sx={{ mt: "20px" }}>
+                                            <Typography sx={{ fontSize: "25px", color: "#212121",color:"white" }}>
+                                                Useful Links
+                                            </Typography>
+                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px",cursor:"pointer",color:"white" }} onClick={()=>{handleNavigator('/')}}>
+                                                <KeyboardArrowRightIcon sx={{ mr: "5px" }} />Home
+                                            </Typography>
+                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px",cursor:"pointer",color:"white" }} onClick={()=>{handleNavigator('/about')}}>
+                                                <KeyboardArrowRightIcon sx={{ mr: "5px" }} />About us
+                                            </Typography>
+                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px",cursor:"pointer",color:"white" }} onClick={()=>{handleNavigator('/')}}>
+                                                <KeyboardArrowRightIcon sx={{ mr: "5px" }} />Team
+                                            </Typography>
+                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px",cursor:"pointer",color:"white" }} onClick={()=>{handleNavigator('/')}}>
+                                                <KeyboardArrowRightIcon sx={{ mr: "5px" }} />Terms of Use
+                                            </Typography>
+                                            <Typography sx={{ color: "#757575", display: "flex", alignItems: "center", mt: "10px",cursor:"pointer",color:"white" }} onClick={()=>{handleNavigator('/privacy')}}>
+                                                <KeyboardArrowRightIcon sx={{ mr: "5px" }} />Privacy Policy
+                                            </Typography>
+                                        </Box>
+                                    </Grid>
+                                    <Grid item lg={5} md={5} sm={6} xs={12} sx={{ display: "flex", justifyContent: { lg: "center", md: "center", sm: "left", xs: "left" } }}>
+                                        <Box sx={{ mt: "20px" }}>
+                                            <Typography align='center' sx={{ fontSize: "25px", color: "#212121",color:"white" }}>
+                                                Our Social Networks
+                                            </Typography>
+                                            <Typography align='center' sx={{ mt: "15px",color:"white" }}>
+                                                Connect with us via our Social Network Accounts
+                                            </Typography>
+                                            <Box sx={{ display: "flex", justifyContent: "Center" }}>
+                                                <Box>
+                                                    <TwitterIcon sx={{ cursor:"pointer",fontSize: "40px",color:"white", "&:hover": { color: "#2979ff" }, m: "10px" }} />
+                                                    <FacebookIcon sx={{ cursor:"pointer",fontSize: "40px",color:"white", "&:hover": { color: "#1e88e5" }, m: "10px" }} />
+                                                    <InstagramIcon sx={{ cursor:"pointer",fontSize: "40px",color:"white", "&:hover": { color: "#ff1744" }, m: "10px" }} />
+                                                </Box>
+                                            </Box>
+                                        </Box>
+                                    </Grid>
+                                </Grid>
+                            </Box>
+
 
 
             </Container>
