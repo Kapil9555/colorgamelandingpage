@@ -126,7 +126,7 @@ const AboutUs = () => {
 
 
                     <Grid item xs={12} sx={{ mt: "20px" }}>
-                        <Grid container className='resultScroll' sx={{ overflow: "scroll", height: "100%", bgcolor: "#f1f3f6", p: "0px 20px" }}>
+                        <Grid container className='resultScroll' sx={{ overflow: "hidden", height: "100%", bgcolor: "#f1f3f6", p: "0px 20px" }}>
                         <Grid item xs={12} sx={{ mb: "20px" }}>
                             <Box >
                                 <Paper sx={{ p: "15px" }}>
