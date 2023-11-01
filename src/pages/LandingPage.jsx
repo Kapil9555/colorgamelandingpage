@@ -464,7 +464,7 @@ const LandingPage = () => {
                                                         <img src={quote} alt="quote" height="35px" width="35px" />
                                                     </Typography>
                                                     <Box sx={{ height: "35%" }}>
-                                                        <Typography align='center' sx={{ fontSize: "15px", fontWeight: "500", textTransform: 'lowercase' }}>“I HAVE PLAYED THIS GAME FROM SO LONG THIS FULLY BASE PN U R ABILTY IF YOU HAVE GOOD MATHMATICS BEST CHOICE FOR YOU .”</Typography>
+                                                        <Typography align='center' sx={{ fontSize: "15px", fontWeight: "500" }}>“I have played this game from so long this fully base pn u r abilty if you have good mathmatics best choice for you .”</Typography>
                                                     </Box>
                                                     <Box >
                                                         <Box sx={{ mt: "17px", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
@@ -489,7 +489,7 @@ const LandingPage = () => {
                                                         <img src={quote} alt="quote" height="35px" width="35px" />
                                                     </Typography>
                                                     <Box sx={{ height: "35%" }}>
-                                                        <Typography align='center' sx={{ fontSize: "15px", fontWeight: "500", textTransform: 'lowercase' }}>"BEST GAME IN PLAYING JUST SOLVE THE QUIZ AND WIN  EASY WITHDRAWLS AND DEPOSIT"</Typography>
+                                                        <Typography align='center' sx={{ fontSize: "15px", fontWeight: "500" }}>"Best game in playing just solve the quiz and win easy withdrawls and deposit"</Typography>
                                                     </Box>
                                                     <Box>
                                                         <Box sx={{ mt: "17px", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
@@ -514,7 +514,7 @@ const LandingPage = () => {
                                                         <img src={quote} alt="quote" height="35px" width="35px" />
                                                     </Typography>
                                                     <Box sx={{ height: "35%" }}>
-                                                        <Typography align='center' sx={{ fontSize: "15px", fontWeight: "500", textTransform: 'lowercase' }}>“THIS BEST GAME I HAVE PLAYED SO FAR NO LUCK BY CHANCE ALL ON BASE OF UR TALENT”</Typography>
+                                                        <Typography align='center' sx={{ fontSize: "15px", fontWeight: "500" }}>“This best game i have played so far no luck by chance all on base of ur talent”</Typography>
                                                     </Box>
                                                     <Box>
                                                         <Box sx={{ mt: "17px", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
