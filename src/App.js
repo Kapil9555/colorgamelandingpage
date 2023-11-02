@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import AboutUs from "./pages/AboutUs";
 import LandingPage from "./pages/LandingPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndCondition from "./pages/TermsAndConditon";
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
           <Route exact path="/" element={<LandingPage/>}/>
           <Route exact path="/about" element={<AboutUs/>}/>
           <Route exact path="/privacy" element={<PrivacyPolicy/>}/>
+          <Route exact path="/terms" element={<TermsAndCondition/>}/>
+
 
 
           {/* <Route exact path="/" element={<ShowButton/>}/> */}
