@@ -550,15 +550,14 @@ const LandingPage = () => {
                                             </Typography>
                                         </Box>
                                         <Box sx={{ mt: '15px' }}>
-                                            <Accordion elevation={1} >
+                                            {/* <Accordion elevation={1} >
                                                 <AccordionSummary
                                                     expandIcon={<ExpandMoreIcon />}
                                                     aria-controls="panel1a-content"
                                                     id="panel1a-header"
-                                                    sx={{ p: "0px 8px" }}
-                                                >
+                                                    sx={{ p: "0px 8px" }}>
                                                     <Typography sx={{ color: "black", fontSize: { lg: "16px", md: "15px", sm: "15px", xs: "12px" }, fontWeight: "bold" }}>
-                                                        Where can I download game?
+                                                      From Where can I download game?
                                                     </Typography>
                                                 </AccordionSummary>
                                                 <AccordionDetails>
@@ -570,7 +569,7 @@ const LandingPage = () => {
                                                     </ul>
 
                                                 </AccordionDetails>
-                                            </Accordion>
+                                            </Accordion> */}
 
 
 
@@ -588,9 +587,9 @@ const LandingPage = () => {
                                                 <AccordionDetails>
 
                                                     <ul>
-                                                        <li style={{ fontSize: "12px", marginTop: "-30px" }}>You can download it from play store / App store or whatever store your mobile support </li>
-                                                        <li style={{ fontSize: "12px" }}>ou can download it directly from google</li>
-                                                        <li style={{ fontSize: "12px" }}>You can take apk from your or person who have the game</li>
+                                                        <li style={{ fontSize: "12px", marginTop: "-30px" }}>Firstly you have to register yourself.</li>
+                                                        <li style={{ fontSize: "12px" }}>Then login into the game and choose the game you want to play.</li>
+                                                        <li style={{ fontSize: "12px" }}>Then deposite IQ in the game through deposite button when you have IQ in your wallet you can play the game.</li>
                                                     </ul>
 
                                                 </AccordionDetails>
@@ -611,9 +610,8 @@ const LandingPage = () => {
                                                 <AccordionDetails>
 
                                                     <ul>
-                                                        <li style={{ fontSize: "12px", marginTop: "-30px" }}>You can download it from play store / App store or whatever store your mobile support </li>
-                                                        <li style={{ fontSize: "12px" }}>ou can download it directly from google</li>
-                                                        <li style={{ fontSize: "12px" }}>You can take apk from your or person who have the game</li>
+                                                        <li style={{ fontSize: "12px", marginTop: "-30px" }}>No its live game you can,t save the game</li>
+                                                        
                                                     </ul>
 
                                                 </AccordionDetails>
@@ -633,15 +631,14 @@ const LandingPage = () => {
                                                 <AccordionDetails>
 
                                                     <ul>
-                                                        <li style={{ fontSize: "12px", marginTop: "-30px" }}>You can download it from play store / App store or whatever store your mobile support </li>
-                                                        <li style={{ fontSize: "12px" }}>ou can download it directly from google</li>
-                                                        <li style={{ fontSize: "12px" }}>You can take apk from your or person who have the game</li>
+                                                        <li style={{ fontSize: "12px", marginTop: "-30px" }}>Reason should be your internet conection or your system is not working please check.</li>
+                                                        
                                                     </ul>
 
                                                 </AccordionDetails>
                                             </Accordion>
 
-                                            <Accordion elevation={1} >
+                                            {/* <Accordion elevation={1} >
                                                 <AccordionSummary
                                                     expandIcon={<ExpandMoreIcon />}
                                                     aria-controls="panel3a-content"
@@ -661,7 +658,7 @@ const LandingPage = () => {
                                                     </ul>
 
                                                 </AccordionDetails>
-                                            </Accordion>
+                                            </Accordion> */}
                                         </Box>
                                     </Box>
                                 </Grid>
