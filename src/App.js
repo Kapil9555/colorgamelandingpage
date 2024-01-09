@@ -3,6 +3,7 @@ import AboutUs from "./pages/AboutUs";
 import LandingPage from "./pages/LandingPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndCondition from "./pages/TermsAndConditon";
+import Return from "./pages/Return";
 
 function App() {
   return (
@@ -13,9 +14,7 @@ function App() {
           <Route exact path="/about" element={<AboutUs/>}/>
           <Route exact path="/privacy" element={<PrivacyPolicy/>}/>
           <Route exact path="/terms" element={<TermsAndCondition/>}/>
-
-
-
+          <Route exact path="/return" element={<Return/>}/>
           {/* <Route exact path="/" element={<ShowButton/>}/> */}
 
         </Routes>
