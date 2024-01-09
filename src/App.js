@@ -16,7 +16,6 @@ function App() {
           <Route exact path="/terms" element={<TermsAndCondition/>}/>
           <Route exact path="/return" element={<Return/>}/>
           {/* <Route exact path="/" element={<ShowButton/>}/> */}
-
         </Routes>
       </Router>
   </>

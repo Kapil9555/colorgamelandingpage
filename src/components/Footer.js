@@ -27,9 +27,9 @@ const FooterComp = () => {
     }
     return (
         <>
-            <Box sx={{ mt: "70px", p: "15px 30px", bgcolor: "black" }}>
-                <Grid container sx={{ p: "5px 10px 20px 10px" }}>
-                    <Grid item lg={4} md={4} sm={6} xs={12} sx={{ display: "flex", justifyContent: { lg: "center", md: "center", sm: "left", xs: "left" } }}>
+            <Box sx={{ mt: "70px", p: "15px 30px", bgcolor: "black"}}>
+                <Grid container sx={{ p: "5px 10px 20px 10px"}}>
+                    <Grid item lg={4} md={4} sm={6} xs={12} sx={{ display:"flex",justifyContent:{lg: "center", md: "center", sm: "left", xs: "left" } }}>
                         <Box sx={{ mt: "20px" }}>
                             <Typography sx={{ fontSize: "25px", color: "white" }}>
                                 LuckyQuiz
@@ -37,7 +37,6 @@ const FooterComp = () => {
                             <Typography sx={{ color: "white" }}>
                                 BLOCK 231C, KACHARUPURIA, BUGDOI BRIDGE,JORHAT,785001,ASSAM
                             </Typography>
-
                             <Typography sx={{ mt: "15px", color: "white" }}>
                                 <span>Phone:</span>+91 -8099851924
                             </Typography>
